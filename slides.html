@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESG 節能設備出海 MVP 策略簡報</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #17211c;
-      --muted: #5c6a62;
-      --line: #d8ded7;
-      --paper: #fbfaf6;
+      --ink: #0d1f17;
+      --muted: #4a6b57;
+      --line: rgba(0,168,107,0.16);
+      --paper: #f5faf6;
       --panel: #ffffff;
-      --green: #0f6b4c;
-      --teal: #0f7a7a;
-      --gold: #b8860b;
+      --green: #00a86b;
+      --green-light: #b5e800;
+      --green-accent: #00c853;
+      --teal: #008f7a;
+      --gold: #7aa900;
       --red: #a84632;
-      --soft-green: #e8f3ed;
-      --soft-teal: #e7f2f2;
-      --soft-gold: #f7efd9;
+      --soft-green: #e9f8ef;
+      --soft-teal: #e8f7f5;
+      --soft-gold: #f4fbdc;
       --soft-red: #f5e9e5;
-      --shadow: 0 18px 50px rgba(25, 35, 29, 0.12);
+      --shadow: 0 18px 50px rgba(13, 31, 23, 0.12);
+      --font-display: "Syne", sans-serif;
       --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
     }
 
@@ -33,7 +39,7 @@
 
     body {
       margin: 0;
-      background: #e9ede8;
+      background: var(--paper);
       color: var(--ink);
       font-family: var(--font);
       line-height: 1.55;
@@ -54,29 +60,61 @@
       gap: 16px;
       max-width: 1180px;
       margin: 0 auto 18px;
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(216, 222, 215, 0.9);
-      backdrop-filter: blur(10px);
+      padding: 12px 16px;
+      background: rgba(245, 250, 246, 0.92);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(12px);
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--muted);
+      color: var(--green);
+      font-family: var(--font-display);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .brand span:last-child {
+      color: var(--ink);
+      font-family: var(--font);
+      font-weight: 700;
     }
 
     .brand-mark {
       width: 28px;
       height: 28px;
-      background:
-        linear-gradient(90deg, var(--green) 0 50%, transparent 50%),
-        linear-gradient(0deg, var(--gold) 0 50%, var(--teal) 50%);
-      border: 1px solid rgba(23, 33, 28, 0.16);
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      border: 1px solid rgba(0, 168, 107, 0.22);
+      border-radius: 50%;
+    }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 14px;
+      color: #fff;
+      background: var(--green);
+      border: 1px solid var(--green);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .home-link:hover,
+    .home-link:focus {
+      color: #fff;
+      background: var(--green-accent);
+      border-color: var(--green-accent);
+      outline: none;
     }
 
     .nav {
@@ -95,10 +133,11 @@
       height: 30px;
       color: var(--muted);
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--panel);
       text-decoration: none;
       font-size: 12px;
       font-weight: 800;
+      border-radius: 50%;
     }
 
     .nav a:hover,
@@ -135,8 +174,8 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(15, 107, 76, 0.09) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(15, 107, 76, 0.06) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(0, 168, 107, 0.09) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 168, 107, 0.06) 1px, transparent 1px);
       background-size: 48px 48px;
       opacity: 0.45;
     }
@@ -614,8 +653,9 @@
     <header class="topbar" aria-label="簡報導覽">
       <div class="brand">
         <span class="brand-mark" aria-hidden="true"></span>
-        ESG 節能設備出海 MVP 策略簡報
+        Yoshi <span>Design Lab · ESG 節能設備出海 MVP 策略簡報</span>
       </div>
+      <a class="home-link" href="index.html">回首頁</a>
       <nav class="nav" aria-label="投影片頁碼">
         <a href="#slide-1">1</a>
         <a href="#slide-2">2</a>
