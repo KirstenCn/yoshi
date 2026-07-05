@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>遊人設計有限公司 Yoshi Design Lab — Taiwan-rooted brands for global dialogue</title>
-<meta name="description" content="遊人設計協助有真實實踐的台灣企業，把永續、技術與地方價值轉譯成能被國際市場理解、信任與傳播的品牌敘事。">
+<title>遊人設計 Yoshi Design Lab — 真實價值，被世界看見</title>
+<meta name="description" content="台灣永續品牌策略顧問。專注 ESG 品牌定位、B Corp 輔導、國際市場進入與 AEO 網站策略。Real values. Global visibility.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Yoshi Design Lab 遊人設計有限公司">
 <meta property="og:description" content="永續品牌策略 × 國際市場進入 × B Corp 顧問。台灣頂尖永續品牌設計顧問公司。">
@@ -43,7 +43,7 @@
   "@type": "ProfessionalService",
   "name": "Yoshi Design Lab — 永續品牌策略顧問",
   "url": "https://yoshidesignlab.com",
-  "description": "協助台灣中小企業與新創品牌以永續為核心，建立國際級品牌定位，進入歐洲與東南亞市場。",
+  "description": "協助台灣中小企業與新創品牌以永續為核心，建立國際級品牌定位，進入全球市場。",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "服務項目",
@@ -129,317 +129,222 @@
 
 <style>
   :root {
-    --accent: #0f6b4c;
-    --accent-soft: #e8f4eb;
-    --bg: #fbfaf4;
-    --surface: #f5f1e9;
-    --dark: #1f2721;
-    --text: #232b23;
-    --muted: #5b6a61;
-    --border: rgba(15,107,76,0.12);
+    --green: #00a86b;
+    --green-light: #b5e800;
+    --green-accent: #00c853;
+    --bg: #f5faf6;
+    --dark: #0d1f17;
+    --dark-mid: #1a3329;
+    --text: #1a2e22;
+    --text-muted: #4a6b57;
+    --white: #ffffff;
+    --border: rgba(0,168,107,0.15);
     --font-display: 'Syne', sans-serif;
     --font-body: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    margin: 0;
     font-family: var(--font-body);
     background: var(--bg);
-    color: var(--dark);
-    line-height: 1.75;
+    color: var(--text);
+    line-height: 1.7;
     overflow-x: hidden;
   }
 
+  /* NAV */
   nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2.5rem;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(36,106,82,0.08);
+    padding: 1rem 3rem;
+    background: rgba(245,250,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
   }
 
   .nav-logo {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 1.14rem;
-    color: var(--dark);
-    letter-spacing: -0.03em;
+    font-size: 1.1rem;
+    color: var(--green);
+    letter-spacing: -0.02em;
     text-decoration: none;
   }
 
-  .nav-logo span {
-    color: var(--accent);
-  }
+  .nav-logo span { color: var(--dark); }
 
   .nav-links {
     display: flex;
-    gap: 1.6rem;
+    gap: 2rem;
     list-style: none;
-    align-items: center;
   }
 
   .nav-links a {
-    color: #55665b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    transition: color 0.2s ease, transform 0.2s ease;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
   }
 
-  .nav-links a:hover {
+  .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--green-accent) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-shape {
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55vw;
+    height: 110vh;
+    background: linear-gradient(135deg, rgba(0,168,107,0.07) 0%, rgba(181,232,0,0.05) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morphBlob 12s ease-in-out infinite;
+  }
+
+  .hero-bg-dot {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(181,232,0,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  @keyframes morphBlob {
+    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    33% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    66% { border-radius: 40% 60% 60% 40% / 50% 60% 40% 50%; }
+  }
+
+  .hero-content {
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid rgba(0,168,107,0.3);
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     color: var(--dark);
-    transform: translateY(-1px);
+    margin-bottom: 1rem;
   }
 
-  .nav-cta,
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.82rem 1.45rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #0f6b4c, #1c7d5f);
-    color: white !important;
-    font-size: 0.92rem;
-    font-weight: 800;
+    gap: 0.5rem;
+    background: var(--green);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 12px 26px rgba(15,107,76,0.16);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
   }
 
-  .nav-cta:hover,
   .btn-primary:hover {
-    background: var(--accent-strong);
-    transform: translateY(-1px);
-    box-shadow: 0 16px 30px rgba(36,106,82,0.18);
+    background: var(--green-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,168,107,0.25);
   }
 
   .btn-ghost {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.82rem 1.45rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.98);
-    border: 1px solid rgba(15,107,76,0.18);
-    color: var(--dark);
-    font-size: 0.92rem;
-    font-weight: 700;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    border: 1.5px solid rgba(26,46,34,0.2);
+    transition: all 0.25s;
+    cursor: pointer;
   }
 
   .btn-ghost:hover {
-    transform: translateY(-1px);
-    background: rgba(15,107,76,0.06);
-    border-color: rgba(15,107,76,0.3);
-    color: var(--accent);
-  }
-
-  .hero {
-    min-height: calc(100vh - 92px);
-    display: grid;
-    align-items: center;
-    padding: 8rem 3rem 5rem;
-    position: relative;
-    overflow: hidden;
-    background:
-      radial-gradient(circle at 8% 10%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 24%),
-      radial-gradient(circle at 88% 18%, rgba(181,232,0,0.58) 0%, rgba(181,232,0,0) 30%),
-      radial-gradient(circle at 70% 82%, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0) 34%),
-      linear-gradient(145deg, #f8fff2 0%, #bdebc3 38%, #2c9d72 74%, #0f6b4c 100%);
-    background-size: 160% 160%, 140% 140%, 150% 150%, 180% 180%;
-    isolation: isolate;
-    animation: heroCurrent 10s ease-in-out infinite alternate;
-  }
-
-  .hero::before,
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: auto;
-    pointer-events: none;
-    z-index: 0;
-    transform-origin: center;
-    will-change: transform, border-radius;
-  }
-
-  .hero::before {
-    top: -34%;
-    right: -22%;
-    width: min(88vw, 1120px);
-    height: min(106vh, 900px);
-    background:
-      radial-gradient(circle at 28% 24%, rgba(255,255,255,0.78), rgba(255,255,255,0) 34%),
-      radial-gradient(circle at 72% 72%, rgba(181,232,0,0.46), rgba(181,232,0,0) 46%),
-      linear-gradient(135deg, rgba(255,255,255,0.58), rgba(0,168,107,0.08));
-    border-radius: 42% 58% 64% 36% / 35% 44% 56% 65%;
-    filter: blur(28px);
-    opacity: 0.95;
-    animation: flowFieldOne 8s ease-in-out infinite alternate;
-  }
-
-  .hero::after {
-    left: 20%;
-    bottom: -34%;
-    width: min(72vw, 920px);
-    height: min(62vh, 560px);
-    background:
-      radial-gradient(circle at 38% 54%, rgba(255,255,255,0.5), rgba(255,255,255,0) 54%),
-      radial-gradient(circle at 70% 40%, rgba(15,107,76,0.38), rgba(15,107,76,0) 62%);
-    border-radius: 66% 34% 45% 55% / 42% 58% 42% 58%;
-    filter: blur(38px);
-    opacity: 0.86;
-    animation: flowFieldTwo 11s ease-in-out infinite alternate;
-  }
-
-  .hero-bg-shape {
-    position: absolute;
-    top: 8%;
-    right: 7%;
-    width: min(48vw, 640px);
-    height: min(82vh, 700px);
-    background:
-      linear-gradient(90deg, transparent 49%, rgba(15,107,76,0.18) 50%, transparent 51%),
-      linear-gradient(0deg, transparent 49%, rgba(15,107,76,0.12) 50%, transparent 51%);
-    filter: blur(2px);
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-    animation: quietDrift 9s ease-in-out infinite alternate;
-  }
-
-  .hero-bg-dot {
-    position: absolute;
-    right: 2%;
-    bottom: 8%;
-    width: min(58vw, 680px);
-    height: min(42vh, 380px);
-    background: radial-gradient(circle, rgba(255,255,255,0.5), rgba(181,232,0,0.32) 34%, rgba(0,168,107,0.12) 56%, transparent 76%);
-    border-radius: 62% 38% 48% 52% / 45% 64% 36% 55%;
-    filter: blur(26px);
-    pointer-events: none;
-    z-index: 1;
-    animation: flowFieldThree 7.5s ease-in-out infinite alternate;
-  }
-
-  .hero-content {
-    max-width: 660px;
-    position: relative;
-    z-index: 3;
-  }
-
-  @keyframes heroCurrent {
-    0% { background-position: 0% 0%, 100% 0%, 62% 100%, 0% 50%; }
-    50% { background-position: 18% 12%, 76% 22%, 44% 76%, 44% 48%; }
-    100% { background-position: 36% 4%, 58% 34%, 20% 92%, 100% 50%; }
-  }
-
-  @keyframes flowFieldOne {
-    0% { transform: translate3d(0, 0, 0) scale(1); border-radius: 42% 58% 64% 36% / 35% 44% 56% 65%; }
-    45% { transform: translate3d(-18%, 12%, 0) scale(1.14) rotate(-3deg); border-radius: 62% 38% 34% 66% / 58% 34% 66% 42%; }
-    100% { transform: translate3d(-34%, 4%, 0) scale(0.96) rotate(4deg); border-radius: 34% 66% 58% 42% / 44% 68% 32% 56%; }
-  }
-
-  @keyframes flowFieldTwo {
-    0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); border-radius: 66% 34% 45% 55% / 42% 58% 42% 58%; }
-    100% { transform: translate3d(-24%, -18%, 0) rotate(10deg) scale(1.22); border-radius: 44% 56% 62% 38% / 55% 38% 62% 45%; }
-  }
-
-  @keyframes flowFieldThree {
-    0% { transform: translate3d(0, 0, 0) scale(1); border-radius: 62% 38% 48% 52% / 45% 64% 36% 55%; }
-    50% { transform: translate3d(-20%, -8%, 0) scale(1.28); border-radius: 46% 54% 62% 38% / 58% 42% 58% 42%; }
-    100% { transform: translate3d(-38%, -22%, 0) scale(1.1); border-radius: 38% 62% 58% 42% / 62% 36% 64% 38%; }
-  }
-
-  @keyframes quietDrift {
-    0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.38; }
-    100% { transform: translate3d(-16%, 9%, 0) scale(1.08); opacity: 0.62; }
-  }
-
-  .hero-tag {
-    display: inline-flex;
-    align-items: center;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-weight: 800;
-    color: var(--accent);
-    border: 1px solid rgba(36,106,82,0.12);
-    padding: 0.35rem 0.95rem;
-    border-radius: 999px;
-    margin-bottom: 1.4rem;
-    background: rgba(36,106,82,0.08);
-  }
-
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 4.3rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    max-width: 8.5ch;
-    margin-bottom: 1.35rem;
-  }
-
-  .hero h1 em {
-    display: inline-block;
-    color: var(--accent);
-    font-style: normal;
-  }
-
-  .hero-sub {
-    font-size: 1rem;
-    color: #4b5b52;
-    max-width: 620px;
-    line-height: 1.95;
-    margin-bottom: 2rem;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .hero-actions a {
-    min-width: 170px;
-    padding: 0.95rem 1.45rem;
+    border-color: var(--green);
+    color: var(--green);
   }
 
   .hero-metrics {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    margin-top: 2.5rem;
-    padding-top: 1.8rem;
-    border-top: 1px solid rgba(15,107,76,0.06);
-  }
-
-  .metric-item {
-    min-width: 140px;
-    padding: 1.25rem 1.35rem;
-    border-radius: 20px;
-    background: white;
-    border: 1px solid rgba(15,107,76,0.08);
-    box-shadow: 0 10px 20px rgba(15,107,76,0.05);
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
   }
 
   .metric-item strong {
@@ -447,195 +352,221 @@
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 800;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
+    color: var(--green);
+    line-height: 1;
   }
 
   .metric-item span {
-    color: var(--muted);
+    font-size: 0.8rem;
+    color: var(--text-muted);
     letter-spacing: 0.02em;
-    font-size: 0.9rem;
   }
 
-  section {
-    padding: 6rem 3rem;
-  }
+  /* SECTION COMMON */
+  section { padding: 5rem 3rem; }
 
   .section-label {
-    font-size: 0.72rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--accent);
-    margin-bottom: 1rem;
+    color: var(--green);
+    margin-bottom: 0.75rem;
   }
 
   .section-title {
     font-family: var(--font-display);
-    font-size: clamp(2.2rem, 3.5vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--dark);
     margin-bottom: 1rem;
   }
 
   .section-desc {
     font-size: 1rem;
-    color: var(--muted);
-    max-width: 680px;
-    line-height: 1.85;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.8;
   }
 
+  /* PAIN POINTS (Awareness) */
   .pain {
-    background: var(--surface);
+    background: var(--dark);
+    color: white;
   }
+
+  .pain .section-title { color: white; }
+  .pain .section-desc { color: rgba(255,255,255,0.55); }
 
   .pain-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
     margin-top: 3rem;
+    border: 1.5px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
   }
 
   .pain-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 20px;
     padding: 2rem;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.25s ease;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.25s;
   }
 
-  .pain-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0,168,107,0.22);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.06);
-  }
+  .pain-card:hover { background: rgba(0,168,107,0.08); }
 
   .pain-icon {
-    width: 44px;
-    height: 44px;
-    display: grid;
-    place-items: center;
-    background: rgba(0,168,107,0.12);
-    border-radius: 16px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,168,107,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
+
+  .pain-icon svg { width: 20px; height: 20px; stroke: var(--green); fill: none; stroke-width: 1.8; }
 
   .pain-card h3 {
     font-family: var(--font-display);
-    font-size: 1.05rem;
-    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
   }
 
-  .pain-card p {
-    color: var(--muted);
-    line-height: 1.8;
-    font-size: 0.95rem;
-  }
+  .pain-card p { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
 
-  .methodology {
-    background: white;
-  }
+  /* METHODOLOGY (Interest) */
+  .methodology { background: var(--white); }
 
   .method-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     margin-top: 3rem;
+    position: relative;
+  }
+
+  .method-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green) 0%, var(--green-light) 100%);
+    z-index: 0;
   }
 
   .method-step {
+    text-align: center;
     position: relative;
-    padding: 2rem 1.8rem;
-    border-radius: 22px;
-    border: 1px solid var(--border);
-    background: var(--surface);
+    z-index: 1;
   }
 
   .step-num {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    border: 2px solid var(--accent);
-    display: grid;
-    place-items: center;
+    background: var(--bg);
+    border: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
     font-family: var(--font-display);
+    font-size: 1.1rem;
     font-weight: 800;
-    color: var(--accent);
-    margin-bottom: 1rem;
+    color: var(--green);
+    transition: all 0.25s;
+  }
+
+  .method-step:hover .step-num {
+    background: var(--green);
+    color: white;
+    transform: scale(1.08);
   }
 
   .method-step h4 {
     font-family: var(--font-display);
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
   }
 
-  .method-step p {
-    color: var(--muted);
-    line-height: 1.8;
-    font-size: 0.95rem;
-  }
+  .method-step p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
 
-  .services {
-    background: var(--surface);
-  }
+  /* SERVICES (Consideration) */
+  .services { background: var(--bg); }
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
   }
 
   .svc-card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,248,0.95));
-    border-radius: 24px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
     padding: 2rem;
-    border: 1px solid rgba(0,168,107,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 16px 30px rgba(0,0,0,0.04);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--green-light));
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 
   .svc-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 26px 52px rgba(0,0,0,0.08);
-    border-color: rgba(0,168,107,0.18);
+    box-shadow: 0 16px 40px rgba(0,168,107,0.1);
+    border-color: rgba(0,168,107,0.3);
   }
+
+  .svc-card:hover::before { opacity: 1; }
 
   .svc-card h3 {
     font-family: var(--font-display);
     font-size: 1.05rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
   }
 
-  .svc-card p {
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-  }
+  .svc-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.25rem; }
 
-  .svc-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
   .svc-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--green);
     background: rgba(0,168,107,0.08);
-    color: var(--accent);
-    padding: 0.45rem 0.9rem;
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 700;
+    border: 1px solid rgba(0,168,107,0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    letter-spacing: 0.03em;
   }
 
-  .cases {
-    background: white;
-  }
+  /* CASE STUDIES (Intent) */
+  .cases { background: white; }
 
   .cases-grid {
     display: grid;
@@ -645,64 +576,54 @@
   }
 
   .case-card {
-    border-radius: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
     overflow: hidden;
-    background: #fbfbf8;
-    border: 1px solid rgba(0,168,107,0.08);
-    transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 16px 34px rgba(0,0,0,0.05);
+    background: var(--bg);
+    transition: transform 0.25s, box-shadow 0.25s;
   }
 
   .case-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0,168,107,0.18);
-    box-shadow: 0 28px 60px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,168,107,0.1);
   }
 
   .case-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.6rem 1.6rem;
     background: var(--dark);
-    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .case-cat {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #a7f1c8;
+    color: var(--green-light);
+    font-weight: 500;
   }
 
   .case-industry {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.75);
-    text-align: right;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
   }
 
-  .case-body {
-    padding: 1.8rem 1.6rem 2rem;
-  }
+  .case-body { padding: 1.5rem 2rem 2rem; }
 
   .case-body h3 {
     font-family: var(--font-display);
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
   }
 
-  .case-body p {
-    color: var(--muted);
-    line-height: 1.85;
-    margin-bottom: 1.4rem;
-  }
+  .case-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.2rem; }
 
   .case-result {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .result-item strong {
@@ -710,27 +631,19 @@
     font-family: var(--font-display);
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--accent);
+    color: var(--green);
   }
 
-  .result-item span {
-    color: var(--muted);
-    font-size: 0.82rem;
-  }
+  .result-item span { font-size: 0.75rem; color: var(--text-muted); }
 
-  .faq {
-    background: var(--surface);
-  }
+  /* FAQ (Intent reinforcement) */
+  .faq { background: var(--bg); }
 
-  .faq-list {
-    margin-top: 2.5rem;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .faq-list { margin-top: 2.5rem; max-width: 760px; }
 
   .faq-item {
     border-bottom: 1px solid var(--border);
+    overflow: hidden;
   }
 
   .faq-q {
@@ -738,55 +651,54 @@
     text-align: left;
     background: none;
     border: none;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
     font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: var(--dark);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    transition: color 0.2s;
   }
 
-  .faq-q:hover {
-    color: var(--accent);
-  }
+  .faq-q:hover { color: var(--green); }
 
-  .faq-icon {
-    width: 26px;
-    height: 26px;
+  .faq-q .faq-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
     border: 1.5px solid rgba(0,168,107,0.3);
     border-radius: 50%;
-    display: grid;
-    place-items: center;
-    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
     font-size: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
   }
 
-  .faq-item.open .faq-icon {
-    transform: rotate(45deg);
-  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
 
   .faq-a {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    color: var(--muted);
-    line-height: 1.85;
-    font-size: 0.95rem;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.8;
   }
 
   .faq-item.open .faq-a {
-    max-height: 360px;
+    max-height: 300px;
     padding-bottom: 1.25rem;
   }
 
+  /* CTA (Conversion) */
   .cta-section {
-    background: linear-gradient(180deg, #17231f 0%, #111915 100%);
-    color: #f8fbf4;
+    background: var(--dark);
     text-align: center;
     padding: 7rem 3rem;
     position: relative;
@@ -795,89 +707,89 @@
 
   .cta-bg {
     position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 520px;
-    height: 520px;
-    background: radial-gradient(circle, rgba(15,107,76,0.18), transparent 64%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,168,107,0.12) 0%, transparent 60%);
     pointer-events: none;
   }
 
   .cta-section .section-title {
-    color: #f8fbf4;
-    margin-bottom: 1rem;
+    color: white;
     max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: clamp(2.5rem, 4.5vw, 3.4rem);
-    line-height: 1.03;
+    margin: 0 auto 1rem;
   }
 
   .cta-section .section-desc {
-    color: rgba(248,251,244,0.78);
-    margin: 0 auto 2rem;
-    max-width: 520px;
+    color: rgba(255,255,255,0.55);
+    margin: 0 auto 2.5rem;
+    max-width: 480px;
     font-size: 1rem;
-    line-height: 1.8;
   }
 
-  .cta-actions {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
   .btn-lime {
-    background: linear-gradient(135deg, #20a86f, #0f6b4c);
-    color: white;
-    padding: 0.95rem 2rem;
-    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--green-light);
+    color: var(--dark);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 800;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    box-shadow: 0 18px 34px rgba(15,107,76,0.25);
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
   }
 
   .btn-lime:hover {
-    transform: translateY(-1px);
-    background: linear-gradient(135deg, #179062, #0d5b3f);
-    box-shadow: 0 18px 42px rgba(15,107,76,0.28);
+    background: #c8f500;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(181,232,0,0.3);
   }
 
   .btn-outline-white {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.18);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
     color: white;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
     padding: 0.85rem 2rem;
-    border-radius: 999px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    transition: all 0.25s;
+    cursor: pointer;
   }
 
-  .btn-outline-white:hover {
-    transform: translateY(-1px);
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.28);
-  }
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.06); }
 
+  /* TRUST STRIP */
   .trust {
     background: white;
     padding: 2.5rem 3rem;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .trust-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: var(--text-muted);
     white-space: nowrap;
   }
 
@@ -885,445 +797,80 @@
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
   }
 
   .trust-badge {
-    background: rgba(0,168,107,0.1);
-    color: var(--accent);
-    border-radius: 999px;
-    padding: 0.45rem 0.9rem;
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 500;
+    color: var(--green);
+    background: rgba(0,168,107,0.07);
+    border: 1px solid rgba(0,168,107,0.18);
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
   }
 
-  /* Berlin-inspired open editorial layout */
-  .hero-metrics {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
-    margin-top: 3.8rem;
-    padding-top: 1.4rem;
-    border-top: 1px solid rgba(15,107,76,0.18);
-  }
-
-  .metric-item {
-    min-width: 0;
-    padding: 0.6rem 1.3rem 0.4rem 0;
-    border-radius: 0;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-  }
-
-  .metric-item strong {
-    font-size: clamp(2.1rem, 5vw, 4.2rem);
-    line-height: 0.9;
-    color: var(--accent);
-  }
-
-  .metric-item span {
-    display: block;
-    max-width: 10rem;
-    margin-top: 0.55rem;
-    color: rgba(31,39,33,0.7);
-    font-size: 0.78rem;
-    font-weight: 700;
-    line-height: 1.35;
-    text-transform: uppercase;
-  }
-
-  .trust {
-    justify-content: flex-start;
-    align-items: baseline;
-    padding: 1.6rem 3rem;
-    gap: 1.2rem;
-    background: var(--bg);
-  }
-
-  .trust-badges {
-    justify-content: flex-start;
-    gap: 0.9rem 1.25rem;
-  }
-
-  .trust-badge {
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    color: rgba(15,107,76,0.78);
-  }
-
-  .pain,
-  .methodology,
-  .services,
-  .cases,
-  .faq {
-    background: var(--bg);
-  }
-
-  .pain-grid,
-  .method-steps,
-  .services-grid,
-  .cases-grid {
-    display: grid;
-    gap: 0;
-    margin-top: 3.5rem;
-    border-top: 1px solid rgba(15,107,76,0.18);
-  }
-
-  .pain-grid,
-  .services-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .method-steps {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .cases-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pain-card,
-  .method-step,
-  .svc-card,
-  .case-card {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    transition: none;
-  }
-
-  .pain-card,
-  .method-step,
-  .svc-card {
-    min-height: 0;
-    padding: 1.4rem 1.5rem 2.3rem 0;
-    border-bottom: 1px solid rgba(15,107,76,0.18);
-  }
-
-  .pain-card:hover,
-  .method-step:hover,
-  .svc-card:hover,
-  .case-card:hover {
-    transform: none;
-    box-shadow: none;
-    border-color: rgba(15,107,76,0.18);
-  }
-
-  .pain-icon {
-    width: 34px;
-    height: 34px;
-    margin-bottom: 1.5rem;
-    background: transparent;
-    border-radius: 0;
-    color: var(--accent);
-  }
-
-  .pain-icon svg {
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-  }
-
-  .pain-card h3,
-  .svc-card h3,
-  .method-step h4 {
-    font-size: clamp(1.35rem, 2.3vw, 2rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
-  }
-
-  .pain-card p,
-  .svc-card p,
-  .method-step p {
-    max-width: 18rem;
-    color: rgba(31,39,33,0.72);
-    font-size: 0.92rem;
-  }
-
-  .step-num {
-    display: block;
-    width: auto;
-    height: auto;
-    margin-bottom: 1.2rem;
-    border: 0;
-    border-radius: 0;
-    color: var(--accent);
-    font-size: clamp(2.4rem, 5vw, 4.8rem);
-    line-height: 0.88;
-  }
-
-  .svc-tags {
-    gap: 0.45rem 0.8rem;
-    margin-top: 1.4rem;
-  }
-
-  .svc-tag {
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
-    color: rgba(15,107,76,0.82);
-    font-size: 0.74rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .case-card {
-    display: grid;
-    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
-    gap: clamp(1.5rem, 5vw, 4rem);
-    padding: 1.8rem 0;
-    border-bottom: 1px solid rgba(15,107,76,0.18);
-    overflow: visible;
-  }
-
-  .case-header {
-    display: block;
-    padding: 0;
-    background: transparent;
-    color: var(--dark);
-  }
-
-  .case-cat,
-  .case-industry {
-    display: block;
-    text-align: left;
-  }
-
-  .case-cat {
-    color: var(--accent);
-  }
-
-  .case-industry {
-    margin-top: 0.45rem;
-    color: rgba(31,39,33,0.64);
-  }
-
-  .case-body {
-    padding: 0;
-  }
-
-  .case-body h3 {
-    font-size: clamp(1.45rem, 3vw, 2.5rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
-  }
-
-  .case-body p {
-    max-width: 680px;
-  }
-
-  .case-result {
-    gap: 1.5rem;
-    padding-top: 0.8rem;
-  }
-
-  .result-item strong {
-    font-size: clamp(1.8rem, 3vw, 2.7rem);
-    line-height: 0.9;
-  }
-
-  .faq-list {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    border-top: 1px solid rgba(15,107,76,0.18);
-  }
-
-  .faq-item {
-    border-bottom-color: rgba(15,107,76,0.18);
-  }
-
-  .faq-icon {
-    border-radius: 0;
-    border-color: rgba(15,107,76,0.35);
-  }
-
-  .sticky-bar {
-    left: auto;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    transform: none;
-    padding: 0;
-    gap: 0.65rem;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .sticky-bar span {
-    color: rgba(31,39,33,0.62);
-    font-size: 0.78rem;
-    font-weight: 700;
-  }
-
-  .sticky-bar .btn-primary {
-    padding: 0 !important;
-    min-width: 0;
-    background: transparent;
-    color: var(--accent) !important;
-    border-radius: 0;
-    box-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
-  }
-
+  /* FOOTER */
   footer {
-    background: #111;
-    color: rgba(255,255,255,0.7);
+    background: var(--dark-mid);
+    color: rgba(255,255,255,0.5);
     text-align: center;
     padding: 2rem 3rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.8;
   }
 
-  footer a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  footer a { color: var(--green); text-decoration: none; }
 
+  /* STICKY CTA BAR */
   .sticky-bar {
     position: fixed;
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
-    background: rgba(255,255,255,0.94);
-    border: 1px solid rgba(15,107,76,0.12);
-    border-radius: 999px;
+    background: var(--dark);
+    border: 1px solid rgba(0,168,107,0.3);
+    border-radius: 50px;
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s;
     pointer-events: none;
   }
 
-  .sticky-bar.visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
+  .sticky-bar.visible { opacity: 1; pointer-events: all; }
 
-  .sticky-bar span {
-    color: var(--dark);
-  }
+  .sticky-bar span { font-size: 0.82rem; color: rgba(255,255,255,0.65); white-space: nowrap; }
 
-  .sticky-bar .btn-primary {
-    background: linear-gradient(135deg, #0f6b4c, #1a7c5d);
-    color: white;
-    box-shadow: 0 14px 32px rgba(15,107,76,0.18);
-  }
+  .sticky-bar .btn-primary { font-size: 0.82rem; padding: 0.5rem 1.25rem; }
 
-  .sticky-bar span {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.75);
-    white-space: nowrap;
-  }
-
-  .sticky-bar .btn-primary {
-    font-size: 0.82rem;
-    padding: 0.55rem 1.4rem;
-  }
-
-  .sticky-bar {
-    left: auto;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    transform: none;
-    padding: 0;
-    gap: 0.65rem;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .sticky-bar span {
-    color: rgba(31,39,33,0.62);
-    font-size: 0.78rem;
-    font-weight: 700;
-  }
-
-  .sticky-bar .btn-primary {
-    padding: 0 !important;
-    min-width: 0;
-    background: transparent;
-    color: var(--accent) !important;
-    border-radius: 0;
-    box-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
-  }
-
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    .hero { padding: 7rem 1.5rem 4.5rem; }
-    section { padding: 5rem 1.5rem; }
-    .hero h1 { font-size: clamp(2.8rem, 9vw, 4.2rem); }
-    .hero-actions { flex-direction: column; align-items: stretch; }
-    .hero-metrics,
-    .pain-grid,
-    .services-grid,
-    .method-steps {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .case-card {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    .hero-bg-shape { width: 90vw; height: 90vh; top: -20%; right: -30%; }
-    .hero-bg-dot { right: 6%; top: 20%; width: 200px; height: 200px; }
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .method-steps { grid-template-columns: 1fr; }
+    .method-steps::before { display: none; }
+    .hero-metrics { gap: 1.5rem; flex-wrap: wrap; }
+    .trust { padding: 2rem 1.5rem; }
+    .cta-section { padding: 5rem 1.5rem; }
+    footer { padding: 1.5rem; }
+    .sticky-bar span { display: none; }
   }
 
-  @media (max-width: 620px) {
-    .hero { padding-top: 6.5rem; }
-    .section-title { font-size: 2rem; }
-    .hero-metrics,
-    .method-steps,
-    .services-grid,
-    .cases-grid,
-    .pain-grid {
-      grid-template-columns: 1fr;
-    }
-    .metric-item {
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(15,107,76,0.14);
-    }
-    .case-header { flex-direction: column; align-items: flex-start; }
-    .trust { padding: 1.5rem; }
-  }
-
+  /* ANIMATIONS */
   .fade-in {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s, transform 0.6s;
   }
 
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero::before,
-    .hero::after,
-    .hero-bg-shape,
-    .hero-bg-dot,
-    .fade-in {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -1332,10 +879,10 @@
 <nav role="navigation" aria-label="主選單">
   <a href="#" class="nav-logo">Yoshi <span>Design Lab</span></a>
   <ul class="nav-links">
-    <li><a href="#methodology">Mission</a></li>
-    <li><a href="#services">Practice</a></li>
-    <li><a href="#cases">Work</a></li>
-    <li><a href="#contact" class="nav-cta">Start</a></li>
+    <li><a href="#services">服務</a></li>
+    <li><a href="#cases">案例</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">預約諮詢</a></li>
   </ul>
 </nav>
 
@@ -1344,34 +891,34 @@
   <div class="hero-bg-shape" aria-hidden="true"></div>
   <div class="hero-bg-dot" aria-hidden="true"></div>
   <div class="hero-content">
-    <span class="hero-tag">Taiwan-rooted Brands × Global Dialogue</span>
-    <h1>從台灣出發，<br><em>走進世界的語言。</em></h1>
+    <span class="hero-tag">永續品牌策略 × 台灣頂尖顧問</span>
+    <h1>真實價值，<br><em>被世界看見。</em></h1>
     <p class="hero-sub">
-      遊人創造一種跨文化的品牌實踐：讓真實行動、永續價值與地方經驗，被清楚轉譯、被信任理解，並進入更大的國際對話。
+      Yoshi Design Lab 協助台灣永續企業建立可驗證的品牌定位，進入歐洲與東南亞市場——以 B Corp 輔導、AEO 網站策略與真實的 ESG 敘事，讓您的品牌不只環保，更能被信任。
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary" aria-label="開始一場品牌轉譯">
-        開始一場品牌轉譯
+      <a href="#contact" class="btn-primary" aria-label="預約免費品牌診斷">
+        預約免費品牌診斷
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#cases" class="btn-ghost">看真實轉譯</a>
+      <a href="#cases" class="btn-ghost">查看客戶案例</a>
     </div>
     <div class="hero-metrics" role="region" aria-label="核心數據">
       <div class="metric-item">
         <strong>30+</strong>
-        <span>real practices translated</span>
+        <span>永續品牌專案</span>
       </div>
       <div class="metric-item">
         <strong>5+</strong>
-        <span>B Corp journeys</span>
+        <span>B Corp 輔導案例</span>
       </div>
       <div class="metric-item">
         <strong>8</strong>
-        <span>markets in dialogue</span>
+        <span>個國際市場</span>
       </div>
       <div class="metric-item">
         <strong>100%</strong>
-        <span>anti-greenwashing stance</span>
+        <span>反漂綠承諾</span>
       </div>
     </div>
   </div>
@@ -1390,121 +937,121 @@
   </div>
 </div>
 
-<!-- VISION — Awareness -->
+<!-- PAIN POINTS — Awareness -->
 <section class="pain" id="pain" aria-labelledby="pain-heading">
-  <div class="section-label">Vision</div>
-  <h2 class="section-title" id="pain-heading">讓有真實實踐的品牌，不被困在自己的語言裡。</h2>
-  <p class="section-desc">許多企業已經在做好的事：改善製程、照顧環境、發展技術、回應社會。但當品牌進入國際市場，這些價值常常被說得太技術、太保守，或太像報告。遊人的工作，是讓這些行動成為可被理解、可被相信、可被傳播的品牌語言。</p>
+  <div class="section-label">您是否正面對這些挑戰？</div>
+  <h2 class="section-title" id="pain-heading">永續品牌的四個最大痛點</h2>
+  <p class="section-desc">多數企業有好的實踐，卻缺乏讓市場相信的方法——這正是我們存在的原因。</p>
   <div class="pain-grid" role="list">
     <div class="pain-card fade-in" role="listitem">
       <div class="pain-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
       </div>
-      <h3>Real practice</h3>
-      <p>我們從企業已經發生的行動出發，而不是替品牌製造漂亮但空泛的永續口號。</p>
+      <h3>品牌說不清楚自己有多「永續」</h3>
+      <p>有 ESG 報告，有 SDGs 對應，卻無法轉化為顧客聽得懂、記得住的品牌語言。</p>
     </div>
     <div class="pain-card fade-in" role="listitem">
       <div class="pain-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
       </div>
-      <h3>Cultural translation</h3>
-      <p>不同市場有不同的語境。遊人把台灣的技術、地方經驗與企業價值，轉成對方能理解的敘事。</p>
+      <h3>擔心被指控漂綠</h3>
+      <p>不敢宣傳環境效益，或宣傳方式引發爭議——缺乏合規的溝通框架。</p>
     </div>
     <div class="pain-card fade-in" role="listitem">
       <div class="pain-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
       </div>
-      <h3>Shared trust</h3>
-      <p>永續不是姿態，而是一套可被檢視的證據、結構與語言。信任必須能被讀懂。</p>
+      <h3>進入國際市場，品牌沒有當地說服力</h3>
+      <p>歐洲或東南亞客戶的採購邏輯不同，台灣的品牌敘事需要在地化轉譯。</p>
     </div>
     <div class="pain-card fade-in" role="listitem">
       <div class="pain-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
-      <h3>Global visibility</h3>
-      <p>讓品牌能出現在展會、搜尋、AI 回答、採購評估與國際合作的正確位置上。</p>
+      <h3>網站流量高，但詢問率低</h3>
+      <p>網站沒有銷售漏斗邏輯，AI 搜尋引擎讀不到結構化資料，導致能見度低。</p>
     </div>
   </div>
 </section>
 
-<!-- MISSION — Interest -->
+<!-- METHODOLOGY — Interest / BrandOS -->
 <section class="methodology" id="methodology" aria-labelledby="method-heading">
-  <div class="section-label">Mission</div>
-  <h2 class="section-title" id="method-heading">We translate real value into shared understanding.</h2>
-  <p class="section-desc">遊人把真實價值，翻譯成能被市場、文化與人理解的敘事。不是把品牌包裝得更大聲，而是讓它的行動被看懂、被相信、被帶往更遠的地方。</p>
-  <div class="method-steps" role="list" aria-label="遊人使命路徑">
+  <div class="section-label">我們的方法論</div>
+  <h2 class="section-title" id="method-heading">BrandOS™ 五步驟品牌作業系統</h2>
+  <p class="section-desc">不是設計，是系統。從品牌核心到市場執行，每個決策都有邏輯可循。</p>
+  <div class="method-steps" role="list" aria-label="BrandOS 方法論步驟">
     <div class="method-step fade-in" role="listitem">
       <div class="step-num" aria-label="步驟一">01</div>
-      <h4>Find</h4>
-      <p>找到企業真正做過、能被驗證，也值得被世界知道的行動。</p>
+      <h4>價值稽核</h4>
+      <p>釐清企業真實的 ESG 實踐，找出差異化的可信基礎</p>
     </div>
     <div class="method-step fade-in" role="listitem">
       <div class="step-num" aria-label="步驟二">02</div>
-      <h4>Frame</h4>
-      <p>把複雜的技術、永續實踐與企業理念，整理成清楚的品牌觀點。</p>
+      <h4>定位設計</h4>
+      <p>以受眾語言與競爭版圖，建立清晰的品牌定位策略</p>
     </div>
     <div class="method-step fade-in" role="listitem">
       <div class="step-num" aria-label="步驟三">03</div>
-      <h4>Translate</h4>
-      <p>依照不同市場、文化與渠道，轉成對方能感知、理解與引用的語言。</p>
+      <h4>敘事架構</h4>
+      <p>產出可擴展的核心訊息框架與多語言品牌故事</p>
     </div>
     <div class="method-step fade-in" role="listitem">
       <div class="step-num" aria-label="步驟四">04</div>
-      <h4>Build</h4>
-      <p>建立網站、展會內容、品牌素材與搜尋結構，讓敘事有地方發生。</p>
+      <h4>市場接觸</h4>
+      <p>AEO 網站、展覽物料、國際市場在地化執行</p>
     </div>
     <div class="method-step fade-in" role="listitem">
       <div class="step-num" aria-label="步驟五">05</div>
-      <h4>Travel</h4>
-      <p>讓品牌走進國際對話，並在一次次接觸中持續被調整與放大。</p>
+      <h4>持續優化</h4>
+      <p>數據追蹤、品牌合規審查與迭代更新機制</p>
     </div>
   </div>
 </section>
 
-<!-- PRACTICE — Consideration -->
+<!-- SERVICES — Consideration -->
 <section class="services" id="services" aria-labelledby="services-heading">
-  <div class="section-label">Practice</div>
-  <h2 class="section-title" id="services-heading">我們打造品牌被理解的條件。</h2>
-  <p class="section-desc">參考 Berlin Design 的行動語氣，遊人的實踐不是服務列表，而是三個讓品牌穿越語境的動詞：Translate, Trust, Outreach。</p>
+  <div class="section-label">服務項目</div>
+  <h2 class="section-title" id="services-heading">四個核心服務，<br>解決您的品牌挑戰</h2>
+  <p class="section-desc">每項服務均符合低碳數位發展、WCAG AA 無障礙與 AEO 標準。</p>
   <div class="services-grid" role="list">
     <article class="svc-card fade-in" role="listitem" itemscope itemtype="https://schema.org/Service">
-      <h3 itemprop="name">Translate</h3>
-      <p itemprop="description">把企業做過的事，轉成市場聽得懂的語言。從技術優勢、永續實踐到創辦人信念，建立可延展的品牌敘事系統。</p>
+      <h3 itemprop="name">永續品牌策略</h3>
+      <p itemprop="description">以 BrandOS™ 方法論為基礎，協助企業從 ESG 實踐中萃取差異化定位，打造可信、可賣的永續品牌故事——適用於展覽、官網、媒體與融資溝通。</p>
       <div class="svc-tags">
         <span class="svc-tag">品牌定位</span>
         <span class="svc-tag">ESG 溝通</span>
+        <span class="svc-tag">反漂綠合規</span>
         <span class="svc-tag">品牌敘事</span>
-        <span class="svc-tag">多語言轉譯</span>
       </div>
     </article>
     <article class="svc-card fade-in" role="listitem" itemscope itemtype="https://schema.org/Service">
-      <h3 itemprop="name">Trust</h3>
-      <p itemprop="description">用證據、結構與合規，讓永續敘事站得住。包含 B Corp 路徑、反漂綠檢核、利害關係人溝通與可信內容架構。</p>
+      <h3 itemprop="name">B Corp 認證輔導</h3>
+      <p itemprop="description">全程陪伴企業完成 B Impact Assessment、文件準備與驗證面談，並將認證成果轉化為市場溝通優勢，強化利害關係人信任。</p>
       <div class="svc-tags">
         <span class="svc-tag">BIA 評估</span>
-        <span class="svc-tag">反漂綠合規</span>
+        <span class="svc-tag">認證文件</span>
+        <span class="svc-tag">ESG 報告</span>
         <span class="svc-tag">利害關係人溝通</span>
-        <span class="svc-tag">證據架構</span>
       </div>
     </article>
     <article class="svc-card fade-in" role="listitem" itemscope itemtype="https://schema.org/Service">
-      <h3 itemprop="name">Outreach</h3>
-      <p itemprop="description">讓台灣品牌進入國際市場、展會、搜尋與 AI 對話。把品牌內容放在更容易被發現、引用與合作的位置。</p>
+      <h3 itemprop="name">國際市場進入策略</h3>
+      <p itemprop="description">協助台灣永續品牌進入歐洲、東南亞與太平洋市場。包含競爭版圖分析、在地化品牌敘事、展覽物料與 B2B 買家溝通策略。</p>
       <div class="svc-tags">
         <span class="svc-tag">歐洲市場</span>
         <span class="svc-tag">東南亞</span>
         <span class="svc-tag">展覽策略</span>
-        <span class="svc-tag">AEO 網站</span>
+        <span class="svc-tag">B2B 品牌</span>
       </div>
     </article>
     <article class="svc-card fade-in" role="listitem" itemscope itemtype="https://schema.org/Service">
-      <h3 itemprop="name">Digital Commons</h3>
-      <p itemprop="description">網站不只是展示頁，而是品牌知識被搜尋、理解與傳播的公共入口。我們建立低碳、可讀、可引用的數位結構。</p>
+      <h3 itemprop="name">AEO 網站策略</h3>
+      <p itemprop="description">以低碳程式碼、WCAG 2.1 AA 無障礙標準與結構化資料標記，打造高能見度、高轉換率網站——讓 AI 搜尋引擎正確引用您的品牌。</p>
       <div class="svc-tags">
         <span class="svc-tag">JSON-LD</span>
         <span class="svc-tag">WCAG AA</span>
         <span class="svc-tag">低碳程式碼</span>
-        <span class="svc-tag">AI 可讀</span>
+        <span class="svc-tag">銷售漏斗</span>
       </div>
     </article>
   </div>
@@ -1512,74 +1059,74 @@
 
 <!-- CASES — Intent -->
 <section class="cases" id="cases" aria-labelledby="cases-heading">
-  <div class="section-label">Work</div>
-  <h2 class="section-title" id="cases-heading">真實企業，真實轉譯。</h2>
-  <p class="section-desc">每一個案子都不是從「包裝」開始，而是從一個已經存在的行動開始：一項技術、一種生活方式、一套專業知識，如何被帶進新的市場與語境。</p>
+  <div class="section-label">客戶案例</div>
+  <h2 class="section-title" id="cases-heading">真實企業，真實成果</h2>
+  <p class="section-desc">從軟體到健康家居，我們協助台灣品牌在國際市場建立可信的永續定位。</p>
   <div class="cases-grid" role="list">
     <article class="case-card fade-in" role="listitem">
       <div class="case-header">
-        <span class="case-cat">From technology</span>
-        <span class="case-industry">to exhibition story</span>
+        <span class="case-cat">B2B 展覽品牌</span>
+        <span class="case-industry">水處理技術</span>
       </div>
       <div class="case-body">
-        <h3>WaterBeauty Innovation 水美創新科技</h3>
-        <p>從水處理技術出發，轉譯成歐洲展會能理解的品牌故事：零化學品清潔定位、六屏影片腳本、B2B 展覽手冊與合規溝通框架。</p>
+        <h3>WaterBeauty Innovation </h3>
+        <p>為 IFAT Munich 展覽打造完整英文品牌識別——包含零化學品清潔定位、六屏品牌影片腳本、B2B 展覽手冊與合規溝通框架，進入歐洲市場。</p>
         <div class="case-result">
           <div class="result-item">
             <strong>6</strong>
-            <span>story scripts</span>
+            <span>品牌影片腳本</span>
           </div>
           <div class="result-item">
             <strong>3</strong>
-            <span>market contexts</span>
+            <span>國際市場</span>
           </div>
           <div class="result-item">
             <strong>100%</strong>
-            <span>credible claims</span>
+            <span>合規溝通</span>
           </div>
         </div>
       </div>
     </article>
     <article class="case-card fade-in" role="listitem">
       <div class="case-header">
-        <span class="case-cat">From health furniture</span>
-        <span class="case-industry">to sensory living</span>
+        <span class="case-cat">健康科技品牌</span>
+        <span class="case-industry">遠紅外線家居</span>
       </div>
       <div class="case-body">
         <h3>Upra 原寓宅 × 大漢家具</h3>
-        <p>從遠紅外線科技與健康家具出發，轉譯成台灣市場能感受的生活體驗：品牌定位、展間情境、感官敘事與多版本落地頁。</p>
+        <p>協助新加坡健康家居品牌建立台灣市場定位，設計以遠紅外線科技為核心的感官體驗品牌敘事，打造展間體驗流程與多版本 HTML 落地頁。</p>
         <div class="case-result">
           <div class="result-item">
             <strong>4</strong>
-            <span>landing narratives</span>
+            <span>落地頁版本</span>
           </div>
           <div class="result-item">
             <strong>5幕</strong>
-            <span>experience scenes</span>
+            <span>展間體驗流程</span>
           </div>
         </div>
       </div>
     </article>
     <article class="case-card fade-in" role="listitem">
       <div class="case-header">
-        <span class="case-cat">From expertise</span>
-        <span class="case-industry">to AI-readable content</span>
+        <span class="case-cat">醫療法規內容</span>
+        <span class="case-industry">生技合規行銷</span>
       </div>
       <div class="case-body">
         <h3>Medimark170 醫療法規顧問</h3>
-        <p>從醫療法規專業出發，轉譯成搜尋引擎與 AI 都能理解的知識內容：七篇結構化文章、雙軌 Schema 標記與合規內容架構。</p>
+        <p>產出七篇 AEO 結構化 HTML 部落格文章，建立雙軌 Schema 標記（JSON-LD + Microdata），符合台灣藥師廣告合規規範，提升搜尋與 AI 引用能見度。</p>
         <div class="case-result">
           <div class="result-item">
             <strong>7</strong>
-            <span>structured articles</span>
+            <span>AEO 文章</span>
           </div>
           <div class="result-item">
             <strong>2x</strong>
-            <span>schema layers</span>
+            <span>Schema 標記</span>
           </div>
           <div class="result-item">
             <strong>AA</strong>
-            <span>accessible content</span>
+            <span>WCAG 合規</span>
           </div>
         </div>
       </div>
@@ -1589,44 +1136,44 @@
 
 <!-- FAQ — Intent reinforcement + AEO -->
 <section class="faq" id="faq" aria-labelledby="faq-heading">
-  <div class="section-label">Questions</div>
-  <h2 class="section-title" id="faq-heading">在開始之前，可以先問清楚。</h2>
-  <p class="section-desc">關於品牌轉譯、永續信任、B Corp 路徑與 AI 可讀網站，這些是合作前最常被問到的事。</p>
+  <div class="section-label">常見問題</div>
+  <h2 class="section-title" id="faq-heading">您可能想知道的事</h2>
+  <p class="section-desc">關於永續品牌策略、B Corp 輔導與 AEO 網站的核心問題解答。</p>
   <div class="faq-list" role="list" aria-label="常見問題列表">
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
-        什麼是「品牌轉譯」？和一般品牌策略有何不同？
+        什麼是永續品牌策略？與一般品牌策略有何不同？
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-a" id="faq-a-1" role="region">品牌轉譯不是把中文翻成英文，也不是把品牌包裝得更漂亮。它是把企業已經做過的真實行動，轉成不同市場、文化、通路與搜尋環境都能理解的敘事。對永續品牌而言，轉譯也包含證據、合規與信任架構。</div>
+      <div class="faq-a" id="faq-a-1" role="region">永續品牌策略是將企業真實的環境與社會價值主張，系統性地轉化為可被市場識別、信任並購買的品牌敘事。有別於表面的綠色行銷，永續品牌策略以可驗證的行動為基礎，避免漂綠風險，並需要符合各市場的廣告法規合規要求。</div>
     </div>
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
-        遊人適合什麼樣的品牌？
+        Yoshi Design Lab 主要服務哪些類型的客戶？
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-a" id="faq-a-2" role="region">我們適合已經有真實實踐、但還沒有被市場清楚理解的品牌：綠色科技、健康科技、循環經濟、ESG 導向企業、準備進入國際市場的 B2B 品牌，以及需要把專業知識轉成內容資產的團隊。我們不接沒有真實行動基礎的漂綠專案。</div>
+      <div class="faq-a" id="faq-a-2" role="region">我們主要服務台灣的綠色科技、健康科技、循環經濟與 ESG 導向企業，協助其建立永續品牌定位並進入國際市場。服務對象涵蓋新創品牌、中小企業與需要 B Corp 認證的企業。我們有不接案的原則：不接純合規案、不接漂綠專案、不接沒有真實 ESG 實踐的案件。</div>
     </div>
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
-        B Corp 和永續溝通在這裡扮演什麼角色？
+        B Corp 認證輔導需要多久時間？費用如何？
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-a" id="faq-a-3" role="region">B Corp 不只是認證，而是一套讓企業檢視自身影響力的語言。遊人可以協助企業整理 BIA、文件與溝通素材，也會把認證過程轉成品牌信任的一部分，讓市場不只看到標章，也理解企業為什麼值得被信任。</div>
+      <div class="faq-a" id="faq-a-3" role="region">一般而言，B Corp 認證流程需要 6 至 18 個月，視企業規模與現有 ESG 實踐成熟度而定。Yoshi Design Lab 提供全程輔導，從 BIA 評估、文件準備到品牌溝通策略一手包辦。費用依企業規模與服務範圍而定，建議先預約免費診斷以了解您的情況。</div>
     </div>
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
-        為什麼網站也需要被「轉譯」？
+        AEO 網站策略與一般 SEO 有何不同？
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-a" id="faq-a-4" role="region">因為網站已經不只是人看的型錄，也是搜尋引擎、AI 工具、採購者與合作夥伴理解品牌的入口。AEO、Schema、無障礙與低碳程式碼，都是讓品牌知識更容易被正確讀取與引用的基礎。</div>
+      <div class="faq-a" id="faq-a-4" role="region">AEO（Answer Engine Optimization）專注於讓網站內容被 AI 搜尋引擎、語音助理與生成式 AI 工具正確引用與回答。除了傳統關鍵字優化，AEO 還包含結構化資料標記（JSON-LD Schema）、語意清晰度、低碳程式碼實踐與 WCAG 無障礙合規——這些也是 Google 與 AI 引擎的排名信號。</div>
     </div>
     <div class="faq-item" role="listitem">
       <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
-        合作如何開始？
+        合作流程是什麼？如何開始？
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-a" id="faq-a-5" role="region">帶著一個真實行動、一項技術、一次市場挑戰，或一個還說不清楚的品牌問題來。我們會先釐清你的品牌目前卡在哪個語境，再判斷需要從定位、內容、網站、展會或國際市場哪裡開始。</div>
+      <div class="faq-a" id="faq-a-5" role="region">第一步是預約免費的 30 分鐘品牌診斷會議，我們會評估您的品牌現況、目標市場與需求，並說明適合的服務組合與時程。確認合作後，我們會簽署服務合約與保密協議，再正式啟動專案。一般專案從 4 週到 6 個月不等，依服務範圍而定。</div>
     </div>
   </div>
 </section>
@@ -1634,28 +1181,28 @@
 <!-- CTA — Conversion -->
 <section class="cta-section" id="contact" aria-labelledby="cta-heading">
   <div class="cta-bg" aria-hidden="true"></div>
-  <div class="section-label">Join Us</div>
-  <h2 class="section-title" id="cta-heading">Bring us a real practice.<br>We will help it travel.</h2>
-  <p class="section-desc">帶著一個真實行動來。遊人會陪你把它整理、轉譯、建立信任，讓它走進更遠的市場與對話。</p>
+  <div class="section-label" style="color:var(--green-light);">立即開始</div>
+  <h2 class="section-title" id="cta-heading">準備好讓您的<br>真實價值被世界看見？</h2>
+  <p class="section-desc">預約 30 分鐘免費品牌診斷——我們幫您釐清定位、找到切入點，不花您一分錢。</p>
   <div class="cta-actions">
-    <a href="mailto:hello@yoshidesignlab.com?subject=開始一場品牌轉譯" class="btn-lime" aria-label="開始一場品牌轉譯（寄信）">
-      開始一場品牌轉譯
+    <a href="mailto:hello@yoshidesignlab.com?subject=預約免費品牌診斷" class="btn-lime" aria-label="預約免費品牌診斷（寄信）">
+      預約免費品牌診斷
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
-    <a href="#cases" class="btn-outline-white">先看轉譯案例</a>
+    <a href="https://yoshidesignlab.com" class="btn-outline-white">瞭解更多服務</a>
   </div>
 </section>
 
 <footer role="contentinfo">
   <p>© 2025 遊人設計有限公司 Yoshi Design Lab · <a href="https://yoshidesignlab.com">yoshidesignlab.com</a></p>
-  <p style="margin-top:0.3rem;">Real value into shared understanding. · 讓真實行動走進世界的語言。</p>
+  <p style="margin-top:0.3rem;">Real values. Global visibility. · 真實價值，被世界看見。</p>
   <p style="margin-top:0.5rem; font-size:0.72rem; opacity:0.5;">Low-carbon code · WCAG 2.1 AA · AEO Structured Data · Anti-greenwashing</p>
 </footer>
 
 <!-- STICKY CTA BAR -->
 <div class="sticky-bar" role="complementary" aria-label="快速聯絡">
-  <span>有一個真實行動想被看懂？</span>
-  <a href="mailto:hello@yoshidesignlab.com?subject=開始一場品牌轉譯" class="btn-primary" style="font-size:0.82rem; padding:0.5rem 1.25rem;">開始轉譯 →</a>
+  <span>準備好了嗎？</span>
+  <a href="mailto:hello@yoshidesignlab.com?subject=預約免費品牌診斷" class="btn-primary" style="font-size:0.82rem; padding:0.5rem 1.25rem;">預約免費診斷 →</a>
 </div>
 
 <script>
