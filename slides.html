@@ -117,6 +117,18 @@
       outline: none;
     }
 
+    .download-link {
+      background: var(--panel);
+      color: var(--green);
+    }
+
+    .download-link:hover,
+    .download-link:focus {
+      color: #fff;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
     .nav {
       display: flex;
       align-items: center;
@@ -655,6 +667,7 @@
         <span class="brand-mark" aria-hidden="true"></span>
         Yoshi <span>Design Lab · ESG 節能設備出海 MVP 策略簡報</span>
       </div>
+      <a class="home-link download-link" href="yoshi-esg-mvp-slides.pdf" download>下載 PDF</a>
       <a class="home-link" href="index.html">回首頁</a>
       <nav class="nav" aria-label="投影片頁碼">
         <a href="#slide-1">1</a>
